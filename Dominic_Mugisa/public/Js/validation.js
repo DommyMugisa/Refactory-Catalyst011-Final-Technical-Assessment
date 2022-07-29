@@ -32,15 +32,15 @@
       // alert('');
     }
   };
-//   const dateOfBirth = () =>{
-//     let dob = document.registration.dob;
-//     let dobVal = dob.value;
-//     if (dobVal == 0 || nameLen < 10 || nameLen > 25){
-//       dob.focus();
-//       dob.style.border = "2px solid red";
-//       // alert('');
-//     }
-//   };
+  const dateOfBirth = () =>{
+    let dob = document.registration.dob;
+    let dobVal = dob.value;
+    if (dobVal == 0 || dobVal < 10 || dobVal > 25){
+      dob.focus();
+      dob.style.border = "2px solid red";
+      // alert('');
+    }
+  };
   const placeOFResidence = () =>{
     let residence = document.registration.residence;
     let nameLen = residence.value.length;

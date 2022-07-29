@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const database = require("../config/database");
 
 const PatientSchema = new mongoose.Schema({
   surname: {
@@ -11,7 +12,7 @@ const PatientSchema = new mongoose.Schema({
     unique: true
   },
   dob: {
-    type: String,
+    type: Date,
     required: true
   },
   residence: {
@@ -26,14 +27,16 @@ const PatientSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  gender: {
+  gendermale: {
     type: String,
-    required: true
+  },
+  genderfemale: {
+    type: String,
   },
   category: {
     type: String,
     required: true
-  },
+  }
 });
 
 module.exports = mongoose.model("Patient", PatientSchema);
